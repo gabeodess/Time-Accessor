@@ -2,10 +2,11 @@
 Time Accessor is a Rails plugin that adds a time_accessor method to ActiveRecord::Base.  The method helps to setup attribute accessors that behave like Time objects and can be set using multiparameters.
 
 = Install
+Add it to your Gemfile:
 	gem 'time_accessor'
 	
 = Usage
-
+Use the time_accessor method in your model:
 	class User < ActiveRecord::Base
 
 	  time_accessor :time
@@ -17,5 +18,5 @@ Then set your 'time' attribute with multiparameters:
 	user = User.new({"time(1i)" => 2012, "time(2i)" => 01, "time(3i)" => 21})
 	user.time # => 2012-01-21 00:00:00 UTC
 	
-
+= License
 This project rocks and uses MIT-LICENSE.
